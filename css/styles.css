@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Source+Serif+Pro:wght@300;400&display=swap');
+
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Source Serif Pro', serif;
+	font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a{
+	text-decoration: none;
+}
+
+img{
+	display: block;
+	width: 100%;
+}
+
+.container{
+	width: 90%;
+	margin: auto;
+}
+
+/** HEADER  **/
+
+nav{
+	background-color: hsl(0, 0%, 100%);
+	padding: 1.0625rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	font-family: 'Source Serif Pro', serif;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.current-page{
+	position: relative;
+}
+
+.current-page::after{
+	content: '';
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background-color: #d98b2b;
+	border-radius: 50%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	transform: translateY(12px);
+}
+
+.social{
+	display: none;
+}
+
+.social-link{
+	margin-left: 0.9375rem;
+	transition: all 300ms ease-in-out;
+}
+
+.social-link:hover{
+	opacity: 0.7;
+}
+
+.social-icon:hover{
+	transform: scale(1.05);
+}
+
+.menu{
+	display: block;
+}
+
+
+.hamburger{
+	width: 2.1666rem;
+	height: 0.125rem;
+	position: relative;
+	margin: 0;
+	background-color: #59271c;
+	transition: 400ms ease-in-out;
+}
+
+.hamburger::before{
+	content: "";
+	width: 2.1666rem;
+	height: 0.125rem;
+	position: absolute;
+	background-color: #59271c;
+	transform: translateY(-0.4375rem);
+	transition: 400ms ease-in-out;
+}
+
+.hamburger::after{
+	content: "";
+	width: 2.1666rem;
+	height: 0.125rem;
+	position: absolute;
+	background-color: #59271c;
+	transform: translateY(0.4375rem);
+	transition: 400ms ease-in-out;
+}
+
+.header-links{
+	display: none;
+}
+
+.cta-link{
+	display: none;
+}
+
+.header-links a{
+	font-size: 0.875rem;
+	font-weight: 700;
+	color:  #59271c;
+	letter-spacing: 0.1rem;
+	margin: 0 1rem;
+	position: relative;
+	padding-bottom: 0.625rem;
+	transition: all 300ms ease-in-out;
+}
+
+.mobile-links{
+	padding: 2.5rem 0;
+	font-size: 0.875rem; 
+	color: #59271c;
+	letter-spacing: 0.08rem;
+}
+
+
+.header-links a:first-child{
+	margin-left: 0;
+}
+
+.header-links a:hover {
+	opacity: 0.7;
+}
+
+
+.header.open .hamburger{
+	background-color: transparent;
+}
+
+.header.open .hamburger::before{
+	transform: rotate(45deg);
+	opacity: 1;
+}
+
+.header.open .hamburger::after{
+	transform: rotate(-45deg);
+	opacity: 1;
+}
+
+.cover{
+	background-image: linear-gradient(#d98b2b, transparent);
+	position:fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.mobile-menu{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.25rem;
+	font-weight: 700;
+	margin-top: 3.125rem;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	background-color: hsl(0, 0%, 100%);
+	position: absolute;
+	left: 1.5rem;
+	right: 1.5rem;
+	z-index: 100;
+	visibility: hidden;
+	height: 65vh;
+	bottom: 3.125rem;
+}
+
+.show{
+	visibility: hidden;
+}
+
+
+/*Hero Section*/
+.hero{
+	min-height: 80vh;
+	background-image: url('../images/hero.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.hero-overlay{
+	min-height: 80vh;
+	background-color: rgba(0,0,0,0.7);
+	padding: 3.125rem 5% 1.975rem 5%;
+	text-align: center;
+}
+
+.welcome{
+	color: #ffffff;
+	font-size: 0.8125rem;
+	text-transform: uppercase;
+	letter-spacing: 0.25rem;
+	margin-top: 1.875rem;
+}
+
+.hero-title{
+	color: #d98b2b;
+	font-family: 'Karla', sans-serif;
+	font-size: 2.8125rem;
+	letter-spacing: 0.05rem;
+	line-height: 1.4;
+	margin: 1.5625rem 0 2.1875rem 0;
+}
+
+.hero-subtitle{
+	color: #ffffff;
+	font-size: 1.25rem;
+	font-weight: 200;
+	letter-spacing: 0.07rem;
+	line-height: 1.7;
+	margin-bottom: 0;
+	margin: 3.125rem 0px 50px 0px;
+}
+
+.hero-button{
+	border: none;
+	padding: 1rem 1.5rem;
+	color: #000000;
+	background-color: #d98b2b;
+	font-size: 1.0625rem;
+	letter-spacing: 0.1rem;
+	cursor: pointer;
+	font-family: 'Source Serif Pro', serif;
+	transition: all 400ms ease-in-out;
+}
+
+.hero-button:hover{
+	border-radius: 1.5625rem;
+}
+
+.scroll-down{
+  left: 47%;
+  top: 99%;
+  transform: translateY(0%) rotate(45deg);
+  opacity: 0;
+}
+
+
+/*About Section*/
+
+.about-title{
+	text-align: center;
+	position: relative;
+	margin: 6.25rem 0 5rem 0;
+	font-family: 'Karla', sans-serif;
+	font-size: 2.1875rem;
+	font-weight: 700;
+	letter-spacing: 0.06rem;
+	color: #59271c;
+}
+
+.about-title::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 4.375rem;
+	height: 0.3125rem;
+	background-color: #d98b2b;
+	transform: translateY(2.5rem);
+	margin: auto;
+
+}
+
+.about-info-container{
+	padding: 0 0 1.875rem 0px;
+	line-height: 1.3rem;
+}
+
+.about-info{
+	line-height: 1.6;
+	font-size: 1.0625rem;
+	text-align: justify;
+	text-justify: inter-word;
+	letter-spacing: 0.06rem;
+	text-align: left;
+}
+
+/* Products and Services Section*/
+.grid-item{
+	margin-bottom: 3.125rem;
+	cursor: pointer;
+	transition: all 300ms ease-in-out;
+}
+
+.grid-item-image-container{
+	height: 18.75rem;
+}
+
+.rafaela{
+	background-image: url('../images/rafaela.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.nice{
+	background-image: url('../images/nice.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.pointe{
+	background-image: url('../images/pointe.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.pet{
+	background-image: url('../images/pet-bottle.jpg');
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.grid-item-info{
+	border: 1px solid grey;
+	padding: 1.375rem 1.375rem 2.5rem 1.375rem;
+	border-radius: 0px 0px 0.3125rem 0.3125rem;
+}
+
+.products-title{
+	text-align: center;
+	position: relative;
+	font-size: 0.625rem;
+	margin: 2.5rem 0px 3.75rem 0px;
+	font-family: 'Karla', sans-serif;
+	font-size: 2.125rem;
+	font-weight: 700;
+	letter-spacing: 0.04rem;
+	color: #59271c;
+}
+
+.products-title::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 8.125rem;
+	height: 5px;
+	background-color: #d98b2b;
+	transform: translateY(2.5rem);
+	margin: auto;
+
+}
+
+.product-name{
+	font-size: 1.9166rem;
+	letter-spacing: 0.09rem;
+	color: #59271c;
+}
+
+.product-description{
+	font-weight: 400;
+	text-align: justify;
+	line-height: 2;
+	letter-spacing: 0.05rem;
+	margin-bottom: 1.875rem;
+}
+
+.product-button{
+	background-color: #d98b2b;
+	border: none;
+	cursor: pointer;
+	padding: 1rem 1.5rem;
+	letter-spacing: 0.05rem;
+	font-size: 1.0625rem;
+	font-family: 'Source Serif Pro', serif;
+	transition: all 400ms ease-in-out;
+}
+
+.product-button:hover{
+	border-radius: 3.125rem;
+}
+
+/* Footer Section*/
+.footer{
+	background-color: #59271c;
+	color: #ffffff;
+	padding: 1.875rem 5% 1.875rem 5%;
+}
+
+address{
+	line-height: 1.7;
+	letter-spacing: 0.09rem;
+	margin-bottom: 2.5rem;
+}
+
+.opening-hours{
+	line-height: 1.7;
+	letter-spacing: 0.09rem;
+}
+
+.copyright{
+	padding: 1.25rem 5% 1.25rem 5%;
+	text-align: center;
+	background-color: #d98b2b;
+	color: #00000099;
+	letter-spacing: 0.05rem;
+}
+
+
+/* About Us Page*/
+
+.about-us-container,
+.our-brands-container{
+	margin: 3.125rem 0px 6.25rem 0px;
+}
+
+.content{
+	display: none;
+	padding: 1.875rem 0px;
+	width: 75%;
+	margin: auto;
+	line-height: 1.5;
+	letter-spacing: 0.05rem;
+	text-align: justify;
+	transition: all 200ms ease-in-out;
+}
+
+.display-image{
+	width: 75%;
+	margin: auto;
+}
+
+.collapsible{
+	display: block;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 1.25rem;
+	width: 75%;
+	margin: auto;
+	border-radius: 0.1875rem;
+	background-color: #59271c;
+	color: #ffffff;
+	font-family: 'Karla', sans-serif;
+	font-size: 1.1.25rem;
+	letter-spacing: 0.08rem;
+	margin-bottom: 0.1875rem;
+	transition: all 200ms ease-in-out;
+}
+
+/* Our Brands page*/
+
+.product-wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.product-nav{
+	background-color: #59271c;
+	border-radius: 0.25rem;
+	width: 25%;
+	margin-bottom: 5rem;
+}
+
+.product-card-image{
+	margin: auto;
+}
+
+.products-display{
+	width: 65%;
+	padding: 0 12.5rem 0 9.365rem;
+}
+
+.product-link{
+	display: block;
+	padding: 1.5625rem;
+	color: #ffffff;
+	border-bottom: 0.0625rem solid #ffffff;
+	transition: all 400ms ease-in-out;
+}
+
+.product-link:hover{
+	color: #d98b2b;
+}
+
+#pointe-card,
+#formular-five-card,
+#rafaela-big-card,
+#nice-card,
+#pet-card{
+	display: none;
+}
+
+/*Contact Us Page*/
+.contact-hero{
+	background-image: url('../images/contact-hero.jpg');
+	background-position: right;
+	background-size: cover;
+	height: 61vh;
+	text-align: center;
+}
+
+.contact-us-overlay{
+	height: 52vh;
+	background-color: rgba(0,0,0,0.7);
+	color: #ffffff;
+	padding: 64px 0 0 0;
+}
+
+.contact-title{
+	font-size: 3.75rem;
+	margin-bottom: 1.25rem;
+	letter-spacing: 0.05rem;
+	color: #d98b2b;
+}
+
+.contact-subtitle{
+	font-size: 1.125rem;
+	letter-spacing: 0.06rem;
+	line-height: 1.5;
+}
+
+.contact-grid-item{
+	width: 70%;
+	margin: auto;
+	background-color: #59271c;
+	border-radius: 0.375rem;
+	color: #ffffff;
+	text-align: center;
+	line-height: 1.7;
+	letter-spacing: 0.09rem;
+	font-size: 1.125rem;
+	padding: 1.875rem;
+	margin-top: -6.25rem;
+	margin-bottom: 2.5rem;
+}
+
+.grid-info{
+	margin: 1.875rem 0.9375rem 1.875rem 0.9375rem;
+	font-size: 1.1875rem;
+}
+
+.call-us{
+	color: #d98b2b;
+	text-decoration: underline;
+	font-size: 1.1875rem;
+}
+
+
+/* Media Query*/
+@media (min-width: 60rem){
+	.header-links{
+		display: block;
+	}
+
+	.social{
+		display: block;
+	}
+
+	.menu{
+		display: none;
+	}
+
+	.hero{
+		min-height: 82vh;
+	}
+
+	.hero-overlay{
+		min-height: 72vh;
+		padding: 4.5rem 0px 0px 0px;
+	}
+
+	.hero-title{
+		font-size: 4.5rem;
+	}
+
+	.scroll-down{
+	  left: 49.1%;
+	  top: 90%;
+	  transform: translateY(0%) rotate(45deg);
+	  opacity: 0;
+	}
+
+	.no-scroll{
+	overflow-y: hidden;
+	}
+
+	.about-wrapper{
+		width: 65%;
+		margin: 6.25rem auto 6.875rem auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 3.125rem;
+		justify-content: center;
+	}
+
+	.about-image-container{
+		height: 26.25rem;
+		background-image: url('../images/about-us.jpg');
+		background-position: 20%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.about-info-container{
+		padding: 0;
+	}
+
+	.products{
+		padding-bottom: 6.25rem;
+	}
+	.product-grid{
+		margin-top: 6.875rem;
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: 1.5625rem;
+	}
+	.grid-item{
+		margin-bottom: 1.875rem;
+	}
+	footer{
+		padding-top: 3.125rem;
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		justify-content: center;
+	}
+	.opening-hours{
+		margin-top: 0px;
+	}
+	.contact-grid-item{
+		width: 30%;
+		margin: auto;
+		margin-top: -6.25rem;
+		margin-bottom: 6.25rem;
+	}
+	.call-us:hover{
+		opacity: 0.7;
+	}
+	.product-card-image{
+		width: 37.5rem;
+	}
+
+}
+
+@keyframes fade-in {
+	from{
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	to{
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	from{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	to{
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 1.25rem; 
+  right: 0px;
+  z-index: 100; 
+  cursor: pointer; 
+}
+
+#myBtn:hover {
+ opacity: 0.8;
+}
+
+.fade-in{
+	animation: fade-in 300ms forwards ease-in-out;
+}
+
+.fade-out{
+	animation: fade-out 300ms forwards ease-in-out;
+}
+
+@keyframes scrolldown {
+            0%{
+                transform: translateY(20%) rotate(45deg);
+                opacity: 0.7;
+            }
+            50%{
+                transform: translateY(0%) rotate(45deg);
+                opacity: 0.2;
+            }
+            100%{
+                transform: translateY(20%) rotate(45deg);
+                opacity: 0.7;
+            }
+        }
+
