@@ -8,30 +8,24 @@ body{
 	font-size: 16px;
 	overflow-x: hidden;
 }
-
 html:focus-within {
   scroll-behavior: smooth;
 }
-
 a{
 	text-decoration: none;
 }
-
 img{
 	display: block;
 	width: 100%;
 }
-
 .logo-img{
 	width: 125px;
 	height: 96px;
 }
-
 .container{
 	width: 90%;
 	margin: auto;
 }
-
 /** HEADER  **/
 
 nav{
@@ -46,11 +40,9 @@ nav{
 	left: 0;
 	right: 0;
 }
-
 .current-page{
 	position: relative;
 }
-
 .current-page::after{
 	content: '';
 	position: absolute;
@@ -65,29 +57,22 @@ nav{
 	margin: auto;
 	transform: translateY(12px);
 }
-
 .social{
 	display: none;
 }
-
 .social-link{
 	margin-left: 0.9375rem;
 	transition: all 300ms ease-in-out;
 }
-
 .social-link:hover{
 	opacity: 0.7;
 }
-
 .social-icon:hover{
 	transform: scale(1.05);
 }
-
 .menu{
 	display: block;
 }
-
-
 .hamburger{
 	width: 2.1666rem;
 	height: 0.125rem;
@@ -96,7 +81,6 @@ nav{
 	background-color: #59271c;
 	transition: 400ms ease-in-out;
 }
-
 .hamburger::before{
 	content: "";
 	width: 2.1666rem;
@@ -106,7 +90,6 @@ nav{
 	transform: translateY(-0.4375rem);
 	transition: 400ms ease-in-out;
 }
-
 .hamburger::after{
 	content: "";
 	width: 2.1666rem;
@@ -116,15 +99,12 @@ nav{
 	transform: translateY(0.4375rem);
 	transition: 400ms ease-in-out;
 }
-
 .header-links{
 	display: none;
 }
-
 .cta-link{
 	display: none;
 }
-
 .header-links a{
 	font-size: 0.875rem;
 	font-weight: 700;
@@ -135,38 +115,29 @@ nav{
 	padding-bottom: 0.625rem;
 	transition: all 300ms ease-in-out;
 }
-
 .mobile-links{
 	padding: 2.5rem 0;
 	font-size: 0.875rem; 
 	color: #59271c;
 	letter-spacing: 0.08rem;
 }
-
-
 .header-links a:first-child{
 	margin-left: 0;
 }
-
 .header-links a:hover {
 	opacity: 0.7;
 }
-
-
 .header.open .hamburger{
 	background-color: transparent;
 }
-
 .header.open .hamburger::before{
 	transform: rotate(45deg);
 	opacity: 1;
 }
-
 .header.open .hamburger::after{
 	transform: rotate(-45deg);
 	opacity: 1;
 }
-
 .cover{
 	background-image: linear-gradient(#d98b2b, transparent);
 	position:fixed;
@@ -177,7 +148,6 @@ nav{
 	opacity: 0;
 	visibility: hidden;
 }
-
 .mobile-menu{
 	display: flex;
 	flex-direction: column;
@@ -197,12 +167,9 @@ nav{
 	height: 65vh;
 	bottom: 3.125rem;
 }
-
 .show{
 	visibility: hidden;
 }
-
-
 /*Hero Section*/
 .hero{
 	min-height: 80vh;
@@ -211,14 +178,12 @@ nav{
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-
 .hero-overlay{
 	min-height: 80vh;
 	background-color: rgba(0,0,0,0.7);
 	padding: 3.125rem 5% 1.975rem 5%;
 	text-align: center;
 }
-
 .welcome{
 	color: #ffffff;
 	font-size: 0.8125rem;
@@ -226,7 +191,6 @@ nav{
 	letter-spacing: 0.25rem;
 	margin-top: 1.875rem;
 }
-
 .hero-title{
 	color: #d98b2b;
 	font-family: 'Karla', sans-serif;
@@ -235,7 +199,6 @@ nav{
 	line-height: 1.4;
 	margin: 1.5625rem 0 2.1875rem 0;
 }
-
 .hero-subtitle{
 	color: #ffffff;
 	font-size: 1.25rem;
@@ -245,7 +208,6 @@ nav{
 	margin-bottom: 0;
 	margin: 3.125rem 0px 50px 0px;
 }
-
 .hero-button{
 	border: none;
 	padding: 1rem 1.5rem;
@@ -257,19 +219,15 @@ nav{
 	font-family: 'Source Serif Pro', serif;
 	transition: all 400ms ease-in-out;
 }
-
 .hero-button:hover{
 	border-radius: 1.5625rem;
 }
-
 .scroll-down{
   left: 47%;
   top: 104%;
   transform: translateY(0%) rotate(45deg);
   opacity: 0;
 }
-
-
 /*About Section*/
 
 .about-title{
@@ -295,14 +253,11 @@ nav{
 	background-color: #d98b2b;
 	transform: translateY(2.5rem);
 	margin: auto;
-
 }
-
 .about-info-container{
 	padding: 0 0 1.875rem 0px;
 	line-height: 1.3rem;
 }
-
 .about-info{
 	margin-top: 0;
 	line-height: 1.6;
@@ -382,21 +337,18 @@ nav{
 	margin: auto;
 
 }
-
 .product-name{
 	font-size: 1.9166rem;
 	letter-spacing: 0.09rem;
 	color: #59271c;
 }
-
 .product-description{
 	font-weight: 400;
 	text-align: justify;
-	line-height: 2;
+	line-height: 1.5;
 	letter-spacing: 0.05rem;
 	margin-bottom: 1.875rem;
 }
-
 .product-button{
 	background-color: #d98b2b;
 	border: none;
@@ -407,29 +359,24 @@ nav{
 	font-family: 'Source Serif Pro', serif;
 	transition: all 400ms ease-in-out;
 }
-
 .product-button:hover{
 	border-radius: 3.125rem;
 }
-
 /* Footer Section*/
 .footer{
 	background-color: #59271c;
 	color: #ffffff;
 	padding: 1.875rem 5% 1.875rem 5%;
 }
-
 address{
 	line-height: 1.7;
 	letter-spacing: 0.09rem;
 	margin-bottom: 2.5rem;
 }
-
 .opening-hours{
 	line-height: 1.7;
 	letter-spacing: 0.09rem;
 }
-
 .copyright{
 	padding: 1.25rem 5% 1.25rem 5%;
 	text-align: center;
@@ -437,15 +384,12 @@ address{
 	color: #00000099;
 	letter-spacing: 0.05rem;
 }
-
-
 /* About Us Page*/
 
 .about-us-container,
 .our-brands-container{
 	margin: 3.125rem 0px 6.25rem 0px;
 }
-
 .content{
 	display: none;
 	padding: 1.875rem 0px;
@@ -456,12 +400,10 @@ address{
 	text-align: justify;
 	transition: all 200ms ease-in-out;
 }
-
 .display-image{
 	width: 75%;
 	margin: auto;
 }
-
 .collapsible{
 	display: block;
 	border: none;
@@ -479,7 +421,6 @@ address{
 	margin-bottom: 0.1875rem;
 	transition: all 200ms ease-in-out;
 }
-
 /* Our Brands page*/
 
 .product-wrapper{
@@ -529,7 +470,7 @@ address{
 	background-image: url('../images/contact-hero.webp');
 	background-position: right;
 	background-size: cover;
-	height: 61vh;
+	height: 62vh;
 	text-align: center;
 }
 
