@@ -260,7 +260,7 @@ nav{
 }
 .about-info{
 	margin-top: 0;
-	line-height: 1.6;
+	line-height: 1.3;
 	font-size: 1.0625rem;
 	text-align: justify;
 	text-justify: inter-word;
@@ -345,7 +345,7 @@ nav{
 .product-description{
 	font-weight: 400;
 	text-align: justify;
-	line-height: 1.5;
+	line-height: 1.4;
 	letter-spacing: 0.05rem;
 	margin-bottom: 1.875rem;
 }
