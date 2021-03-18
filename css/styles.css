@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Source+Serif+Pro:wght@300;400&display=swap');
 
 body{
 	margin: 0;
@@ -263,7 +264,7 @@ nav{
 
 .scroll-down{
   left: 47%;
-  top: 99%;
+  top: 104%;
   transform: translateY(0%) rotate(45deg);
   opacity: 0;
 }
@@ -631,20 +632,26 @@ address{
 	}
 
 	.about-image-container{
-		height: 26.25rem;
+		height:26.75rem;
 		background-image: url('../images/about-us.webp');
-		background-position: 20%;
+		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
 
 	.about-info-container{
 		padding: 0;
+
+	}
+
+	.about-info{
+		line-height: 1.8;
 	}
 
 	.products{
 		padding-bottom: 6.25rem;
 	}
+	
 	.product-grid{
 		margin-top: 6.875rem;
 		display: grid;
