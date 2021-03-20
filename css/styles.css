@@ -260,11 +260,11 @@ nav{
 }
 .about-info{
 	margin-top: 0;
-	line-height: 1.3;
+	line-height: 1.4;
 	font-size: 1.0625rem;
 	text-align: justify;
 	text-justify: inter-word;
-	letter-spacing: 0.06rem;
+	letter-spacing: 0.025rem;
 }
 
 /* Products and Services Section*/
@@ -274,7 +274,7 @@ nav{
 }
 
 .grid-item-image-container{
-	height: 18.75rem;
+	height: 16.75rem;
 }
 
 .rafaela{
@@ -307,7 +307,7 @@ nav{
 
 .grid-item-info{
 	border: 1px solid grey;
-	padding: 1.375rem 1.375rem 2.5rem 1.375rem;
+	padding: 0rem 1.1rem 2.5rem 1.1rem;
 	border-radius: 0px 0px 0.3125rem 0.3125rem;
 }
 
@@ -338,15 +338,14 @@ nav{
 
 }
 .product-name{
-	font-size: 1.9166rem;
+	font-size: 1.5166rem;
 	letter-spacing: 0.09rem;
 	color: #59271c;
 }
 .product-description{
 	font-weight: 400;
 	text-align: justify;
-	line-height: 1.4;
-	letter-spacing: 0.05rem;
+	line-height: 1.35;
 	margin-bottom: 1.875rem;
 }
 .product-button{
@@ -355,7 +354,7 @@ nav{
 	cursor: pointer;
 	padding: 1rem 1.5rem;
 	letter-spacing: 0.05rem;
-	font-size: 1.0625rem;
+	font-size: 0.825rem;
 	font-family: 'Source Serif Pro', serif;
 	transition: all 400ms ease-in-out;
 }
@@ -526,6 +525,38 @@ address{
 
 
 /* Media Query*/
+
+@media (min-width: 768px) and (max-width: 59rem),
+		(min-height: 768px) and (max-height: 59rem){
+			.hero{
+				min-height: 40vh;
+			}
+
+			.hero-overlay{
+				min-height: 40vh;
+			}
+
+			.scroll-down{
+				top: 560px;
+				left: 48.7%;
+			}
+
+			.product-grid{
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-gap: 35px;
+			}
+
+			.contact-hero{
+				height: 40vh;
+			}
+
+			.contact-us-overlay{
+				height: 34vh;
+			}
+		}
+
+
 @media (min-width: 60rem){
 	.header-links{
 		display: block;
@@ -554,7 +585,7 @@ address{
 
 	.scroll-down{
 	  left: 49.1%;
-	  top: 90%;
+	  top: 650px;
 	  transform: translateY(0%) rotate(45deg);
 	  opacity: 0;
 	}
@@ -573,7 +604,7 @@ address{
 	}
 
 	.about-image-container{
-		height:31.75rem;
+		height:26.15rem;
 		background-image: url('../images/about-us.webp');
 		background-position: center;
 		background-repeat: no-repeat;
@@ -598,10 +629,10 @@ address{
 		display: grid;
 		grid-template-columns: repeat(4,1fr);
 		grid-template-rows: 1fr;
-		grid-column-gap: 22px;
+		grid-column-gap: 25px;
 	}
 	.grid-item{
-		margin-bottom: 1.875rem;
+		margin-bottom: 1.475rem;
 	}
 	footer{
 		padding-top: 3.125rem;
@@ -626,6 +657,8 @@ address{
 	}
 
 }
+
+
 
 @keyframes fade-in {
 	from{
